@@ -1,0 +1,22 @@
+import random
+#Rock Paper Scissors
+#Brocolli Basil Beets
+
+choices=["beets", "basil", "broccoli"]
+dict_a={"beets":1, "basil":2, "broccoli":3} 
+print("Play beets basil broccoli")
+print("One Two Three Choose!")
+player_answer=""
+while player_answer!="exit":
+  player_answer=input()
+  player_answer=player_answer.lower()
+  computer_answer=random.choice(choices)
+  if dict_a[player_answer]-dict_a[computer_answer] in [-1,2]:
+    print("The computer chose "+str(computer_answer))
+    print("You win!! You are smarter than I am :(")
+  elif dict_a[player_answer]-dict_a[computer_answer] in [1,-2]:
+    print("The computer chose "+str(computer_answer))
+    print("The Computer wins!! You humans are worthless bastards!!")
+  else:
+    print("The computer chose "+str(computer_answer))
+    print("It's a tie")
